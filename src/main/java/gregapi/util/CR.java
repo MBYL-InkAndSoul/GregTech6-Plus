@@ -59,6 +59,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 /**
+ * Crafting Recipe
  * @author Gregorius Techneticies
  */
 public class CR {

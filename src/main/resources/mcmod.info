@@ -1,6 +1,6 @@
 [{
-  "modid": "gregtech",
-  "name": "GregTech",
+  "modid": "gregtech6",
+  "name": "GregTech6",
   "description": "Has taken Minecraft to a whole new Level of complexity!",
   "mcversion": "${mcversion}",
   "version": "${version}",
