@@ -81,6 +81,7 @@ import gregapi.tileentity.energy.EnergyCompat;
 import gregapi.util.CR;
 import gregapi.util.ST;
 import gregapi.util.UT;
+import gregapi.worldgen.GT6WorldGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -615,8 +616,8 @@ public class GT_API extends Abstract_Mod {
 		ITexture.Util.GT_ALPHA_BLENDING     = ConfigsGT.CLIENT.get(ConfigCategories.general, "useGTAlphaBlending"      , ITexture.Util.GT_ALPHA_BLENDING);
 		ITexture.Util.MC_ALPHA_BLENDING     = ConfigsGT.CLIENT.get(ConfigCategories.general, "useMCAlphaBlending"      , ITexture.Util.MC_ALPHA_BLENDING);
 		
-//		GT6WorldGenerator.PFAA = (ConfigsGT.WORLDGEN.get(ConfigCategories.general, "AutoDetectPFAA", T) && MD.PFAA.mLoaded && MD.COG.mLoaded);
-//		GT6WorldGenerator.TFC  = (ConfigsGT.WORLDGEN.get(ConfigCategories.general, "AutoDetectTFC" , T) && (MD.TFC.mLoaded || MD.TFCP.mLoaded));
+		GT6WorldGenerator.PFAA = (ConfigsGT.WORLDGEN.get(ConfigCategories.general, "AutoDetectPFAA", T) && MD.PFAA.mLoaded && MD.COG.mLoaded);
+		GT6WorldGenerator.TFC  = (ConfigsGT.WORLDGEN.get(ConfigCategories.general, "AutoDetectTFC" , T) && (MD.TFC.mLoaded || MD.TFCP.mLoaded));
 		
 		// Register Crafting Recipe Classes.
 		RecipeSorter.register("gregtech6:shaped"   , AdvancedCraftingShaped.class   , RecipeSorter.Category.SHAPED   , "after:minecraft:shaped before:minecraft:shapeless");
@@ -694,7 +695,7 @@ public class GT_API extends Abstract_Mod {
 		// Creating and loading the Lang File.
 		if (CODE_CLIENT) {
 			tFile = new File(DirectoriesGT.MINECRAFT, "GregTech6.lang");
-			if (!tFile.exists()) tFile = new File(DirectoriesGT.MINECRAFT, "gregtech.lang");
+			if (!tFile.exists()) tFile = new File(DirectoriesGT.MINECRAFT, "gregtech6.lang");
 			LanguageHandler.sLangFile = new Configuration(tFile);
 			LanguageHandler.sUseFile = LanguageHandler.sLangFile.get("EnableLangFile", "UseThisFileAsLanguageFile", F).getBoolean(F);
 		} else {

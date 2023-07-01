@@ -1225,7 +1225,7 @@ public abstract class GT_API_Proxy extends Abstract_Proxy implements IGuiHandler
 	
 	@Override
 	public void generate(Random aRandom, int aChunkX, int aChunkZ, World aWorld, IChunkProvider aChunkGenerator, IChunkProvider aChunkProvider) {
-//		GT6WorldGenerator.generate(aWorld, aChunkX << 4, aChunkZ << 4, F);
+		GT6WorldGenerator.generate(aWorld, aChunkX << 4, aChunkZ << 4, F);
 	}
 	/*
 	@SubscribeEvent
